@@ -1,0 +1,191 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    
+    .logo {
+        margin: auto;
+        width: 20%;
+    }
+    
+    .navbar {
+        width: 100%;
+        margin: 0px auto;
+        left: 0;
+        right: 0;
+        padding: 0;
+    }
+    
+    .bento-menu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 1.7px;
+        grid-row-gap: 1.7px;
+        height: 15px;
+        width: 15px;
+    }
+    
+    .bento-dot {
+        width: 4.2px;
+        height: 4.2px;
+        border-radius: 500px;
+        background: #575151;
+        overflow: hidden;
+    }
+    /* search engine */
+    
+    #searchbar {
+        margin: auto;
+        width: 53%;
+    }
+    
+    .form-group {
+        margin: 0;
+        padding: 20px;
+    }
+    
+    .form-control {
+        padding: 0px 20px 0 20px;
+        margin-top: 16px;
+        color: #333;
+        font-size: 28px;
+        font-weight: 500;
+        border: 3px solid #555;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        min-height: 40px;
+        height: auto;
+        border-radius: 50px 50px 50px 50px!important;
+    }
+    
+    .form-control :focus {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-color: transparent;
+    }
+    /* icon */
+    
+    .input-icons i {
+        position: absolute;
+    }
+    
+    .mic-icon {
+        right: 408px;
+        position: absolute;
+        top: 205px;
+    }
+    
+    .input-icons {
+        width: 100%;
+        margin-bottom: 10px;
+        outline: none;
+    }
+    
+    #search {
+        padding: 10px;
+        min-width: 40px;
+        color: grey;
+        left: 395px;
+        position: absolute;
+        top: 198px;
+    }
+    
+    #mic {
+        height: 25px;
+        width: 25px;
+    }
+    
+    .google {
+        outline: none;
+    }
+    /* buttons */
+    
+    .button1 {
+        background-color: rgb(226, 226, 226);
+        border: none;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    
+    .button2 {
+        background-color: rgb(226, 226, 226);
+        border: none;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    
+    .covid {
+        text-decoration: none;
+        color: indigo;
+    }
+    
+    @media screen and (min-width:300px)and (max-width: 900px) {
+        /* For mobile phones: */
+        .navbar {
+            width: 100%;
+            margin-right: 0%;
+            left: 0;
+            right: 0;
+            padding: 0;
+        }
+        .google {
+            width: 100%;
+        }
+        #searchbar {
+            margin: auto;
+            width: 53%;
+        }
+        .mic-icon {
+            right: 110px;
+            position: absolute;
+            top: 140px;
+        }
+        #search {
+            left: 100px;
+            top: 130px;
+        }
+    }
+    /* footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+    
+    footer>.row {
+        background-color: rgba(100, 99, 99, 0.126);
+        width: 100%;
+        padding: 10px;
+        border: 1px solid black;
+    }
+    
+    .text {
+        margin-left: 10px;
+    }
+    
+    footer>.row ul {
+        display: flex;
+        list-style: none;
+    }
+    
+    footer>.row ul li {
+        padding: 4px 0px 4px 12px;
+    }
+    
+    .row.bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .right {
+        align-items: right;
+    } */
+    
+    footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
