@@ -16,8 +16,14 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" /> -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+    <script type="text/javascript">
+        function trim(myString) {
+            return myString.replace(/^\s+|\s+$/g, '');
+        }
+    </script>
 
     <title>Document</title>
 </head>
@@ -77,14 +83,12 @@
                 <div class="col-xs-10 col-xs-offset-1"></div>
                 <div class="form-group " id="searchbar">
 
-                    <form action="#" method="#" role="search">
+                    <form action="" id="main" method="POST" role="search" autofocus="autofocus">
                         <div class="input-icons">
 
                             <!-- search icon -->
                             <i class="bi bi-search " id="search"></i>
-                            <input class="form-control" name="srch-term" id="ed-srch-term" type="text">
-
-
+                            <input class="form-control" name="srch-term" id="search-box" type="text" onchange="this.value = trim(this.value);">
                             <a><img src="micicon.png" class="mic-icon" id="mic"></a>
                         </div>
                     </form>
@@ -97,8 +101,8 @@
 
     <!-- search button -->
     <div class="text-center">
-        <button type="button" class="button1">Google Search</button>
-        <button type="button" class="button2">&nbsp;I'am Feeling Lucky</button>
+        <button type="submit" class="button1">Google Search</button>
+        <button type="submit" class="button2 ">&nbsp;I'am Feeling Lucky</button>
         </br>
         </br>
 
@@ -110,29 +114,7 @@
 
 
 
-    <!-- footer -->
-    <!-- <footer>
-        <div class="row">
-            <div class="text"> India</div>
-        </div>
-        <hr style="background-color:grey">
-        <div class="row bottom">
-            <ul>
-                <li>Advertising</li>
-                <li>Business</li>
-                <li>About</li>
-                <li>How search works</li>
-            </ul>
-            <div class="right"> 
-            <ul class="right">
-                <li>Privacy</li>
-                <li>Terms</li>
-                <li>Settings</li>
-            </ul>
 
-        </div>
-
-    </footer> -->
 
     <footer>
         <nav class="navbar navbar-expand navbar-light bg-light">
@@ -142,15 +124,12 @@
         </nav>
         <nav class="navbar navbar-expand navbar-light bg-light">
             <div class="container-fluid">
-                <!-- <a class="navbar-brand" href="#">Navbar w/ text</a> -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <!-- <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li> -->
+
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>
                         </li>
@@ -179,11 +158,12 @@
     </footer>
 
 </body>
+
 <script>
     document.querySelector('#main').onsubmit = function(e) {
         e.preventDefault();
-        var search = document.querySelector('#ed-srch-term').value;
-        location.href = ('https://google.com/search?q=' + search)
+        var searchit = document.querySelector('#search-box').value;
+        location.href = ('https://google.com/search?q=' + searchit)
     };
 </script>
 

@@ -123,6 +123,10 @@
         color: indigo;
     }
     
+    .navbar-text {
+        outline: none;
+    }
+    
     @media screen and (min-width:300px)and (max-width: 900px) {
         /* For mobile phones: */
         .navbar {
@@ -135,6 +139,9 @@
         .google {
             width: 100%;
         }
+        .logo {
+            width: 40%;
+        }
         #searchbar {
             margin: auto;
             width: 53%;
@@ -142,50 +149,24 @@
         .mic-icon {
             right: 110px;
             position: absolute;
-            top: 140px;
+            top: 166px;
         }
         #search {
             left: 100px;
-            top: 130px;
+            top: 158px;
+        }
+        .navbar-text {
+            display: none;
         }
     }
-    /* footer {
-        position: fixed;
-        width: 100%;
-        bottom: 0;
-    }
-    
-    footer>.row {
-        background-color: rgba(100, 99, 99, 0.126);
-        width: 100%;
-        padding: 10px;
-        border: 1px solid black;
-    }
-    
-    .text {
-        margin-left: 10px;
-    }
-    
-    footer>.row ul {
-        display: flex;
-        list-style: none;
-    }
-    
-    footer>.row ul li {
-        padding: 4px 0px 4px 12px;
-    }
-    
-    .row.bottom {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .right {
-        align-items: right;
-    } */
     
     footer {
         position: fixed;
         width: 100%;
         bottom: 0;
+    }
+    
+    #search-box {
+        padding-left: 30px;
+        padding-right: 35px;
     }
